@@ -1,0 +1,7 @@
+{description, "Erlang ct suite"}.
+{variables, [
+    {name, "name", "Name of the suite, prepended to standard _SUITE suffix"}
+]}.
+
+{dir, "./test/ct"}.
+{template, "ct-suite/SUITE.erl", "./test/ct/{{name}}_SUITE.erl"}.

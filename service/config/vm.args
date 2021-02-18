@@ -1,0 +1,11 @@
+-sname ${{{name_upper}}_VMARGS_SNAME}
+-setcookie ${{{name_upper}}_VMARGS_COOKIE}
+
++e ${{{name_upper}}_VMARGS_LIMIT_ETS}
++P ${{{name_upper}}_VMARGS_LIMIT_PROCESSES}
++Q ${{{name_upper}}_VMARGS_LIMIT_PORTS}
++t ${{{name_upper}}_VMARGS_LIMIT_ATOMS}
+
++A ${{{name_upper}}_VMARGS_ASYNC_THREADS}
++K ${{{name_upper}}_VMARGS_KERNEL_POLL}
++pc unicode

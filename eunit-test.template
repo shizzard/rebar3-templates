@@ -1,0 +1,8 @@
+{description, "Erlang eunit test"}.
+{variables, [
+    {name, "name", "Name of the test, prepended to standard _tests suffix"},
+    {app, "name", "Application path to generate eunit tests app"}
+]}.
+
+{dir, "./{{apps_dir}}/{{app}}/test"}.
+{template, "eunit-test/tests.erl", "./{{apps_dir}}/{{app}}/test/{{name}}_tests.erl"}.

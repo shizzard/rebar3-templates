@@ -1,0 +1,8 @@
+{application, '{{name}}', [
+    {description, "{{description}}"},
+    {vsn, "0.1.0"},
+    {registered, []},
+    {mod, {'{{name}}_app', []}},
+    {applications, [kernel, stdlib]},
+    {env,[]}
+]}.

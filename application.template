@@ -1,0 +1,9 @@
+{description, "Erlang application structure"}.
+{variables, [
+    {name, "application"},
+    {description, "Fill in description of the application here."}
+]}.
+
+{template, "service/apps/service/src/service.app.src", "apps/{{name}}/src/{{name}}.app.src"}.
+{template, "service/apps/service/src/service_app.erl", "apps/{{name}}/src/{{name}}_app.erl"}.
+{template, "service/apps/service/src/service_sup.erl", "apps/{{name}}/src/{{name}}_sup.erl"}.
