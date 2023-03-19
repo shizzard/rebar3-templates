@@ -1,4 +1,4 @@
--module({{name}}_app).
+-module('{{name}}_app').
 -behaviour(application).
 
 -include_lib("typr/include/typr_specs_application.hrl").

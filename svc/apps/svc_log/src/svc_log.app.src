@@ -1,0 +1,7 @@
+{application, '{{name}}_log', [
+  {description, "Log facilities for {{name}}"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {applications, [kernel, stdlib, uuid]},
+  {env,[]}
+]}.

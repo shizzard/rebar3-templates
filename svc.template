@@ -1,0 +1,52 @@
+{description, "Erlang service with config, logs, lux tests and Makefiles"}.
+{variables, [
+  {name, "service"},
+  {name_upper, "SERVICE"},
+  {description, "Fill in description of the project here."},
+  {author_name, "Denis Fakhrtdinov"},
+	{author_email, "denis@spawnlink.eu"}
+]}.
+
+{template, "svc/.envrc", "{{name}}/.envrc"}.
+{template, "svc/.envrc.example", "{{name}}/.envrc.example"}.
+{template, "svc/.tool-versions", "{{name}}/.tool-versions"}.
+{template, "svc/.gitignore", "{{name}}/.gitignore"}.
+{template, "svc/Dockerfile", "{{name}}/Dockerfile"}.
+{template, "svc/README.md", "{{name}}/README.md"}.
+
+{template, "svc/Makefile", "{{name}}/Makefile"}.
+{template, "svc/first-run.mk", "{{name}}/first-run.mk"}.
+{template, "svc/env-vars.mk", "{{name}}/env-vars.mk"}.
+
+{template, "svc/rebar.config", "{{name}}/rebar.config"}.
+{template, "svc/config/sys.config", "{{name}}/config/sys.config"}.
+{template, "svc/config/vm.args", "{{name}}/config/vm.args"}.
+
+% apps
+{template, "svc/apps/svc/src/svc_sup.erl", "{{name}}/apps/{{name}}/src/{{name}}_sup.erl"}.
+{template, "svc/apps/svc/src/svc_app.erl", "{{name}}/apps/{{name}}/src/{{name}}_app.erl"}.
+{template, "svc/apps/svc/src/svc.app.src", "{{name}}/apps/{{name}}/src/{{name}}.app.src"}.
+{template, "svc/apps/svc/src/svc_config.erl", "{{name}}/apps/{{name}}/src/{{name}}_config.erl"}.
+
+{template, "svc/apps/svc_log/include/svc_log.hrl", "{{name}}/apps/{{name}}_log/include/{{name}}_log.hrl"}.
+{template, "svc/apps/svc_log/src/svc_log.erl", "{{name}}/apps/{{name}}_log/src/{{name}}_log.erl"}.
+{template, "svc/apps/svc_log/src/svc_log_f.erl", "{{name}}/apps/{{name}}_log/src/{{name}}_log_f.erl"}.
+{template, "svc/apps/svc_log/src/svc_log.app.src", "{{name}}/apps/{{name}}_log/src/{{name}}_log.app.src"}.
+
+{template, "svc/apps/svc_cli/include/svc_cli_handler.hrl", "{{name}}/apps/{{name}}_cli/include/{{name}}_cli_handler.hrl"}.
+{template, "svc/apps/svc_cli/include/svc_cli.hrl", "{{name}}/apps/{{name}}_cli/include/{{name}}_cli.hrl"}.
+{template, "svc/apps/svc_cli/include/svc_cli_getopt.hrl", "{{name}}/apps/{{name}}_cli/include/{{name}}_cli_getopt.hrl"}.
+{template, "svc/apps/svc_cli/src/handler/svc_cli_handler.erl", "{{name}}/apps/{{name}}_cli/src/handler/{{name}}_cli_handler.erl"}.
+{template, "svc/apps/svc_cli/src/handler/svc_cli_handler_help.erl", "{{name}}/apps/{{name}}_cli/src/handler/{{name}}_cli_handler_help.erl"}.
+{template, "svc/apps/svc_cli/src/handler/svc_cli_handler_actions.erl", "{{name}}/apps/{{name}}_cli/src/handler/{{name}}_cli_handler_actions.erl"}.
+{template, "svc/apps/svc_cli/src/svc_cli.erl", "{{name}}/apps/{{name}}_cli/src/{{name}}_cli.erl"}.
+{template, "svc/apps/svc_cli/src/svc_cli_log.erl", "{{name}}/apps/{{name}}_cli/src/{{name}}_cli_log.erl"}.
+{template, "svc/apps/svc_cli/src/svc_cli.app.src", "{{name}}/apps/{{name}}_cli/src/{{name}}_cli.app.src"}.
+{template, "svc/apps/svc_cli/src/svc_cli_getopt.erl", "{{name}}/apps/{{name}}_cli/src/{{name}}_cli_getopt.erl"}.
+
+% tests
+{template, "svc/tests/lux/.gitignore", "{{name}}/tests/lux/.gitignore"}.
+{template, "svc/tests/lux/__skeleton/test.lux", "{{name}}/tests/lux/__skeleton/test.lux"}.
+{template, "svc/tests/lux/__skeleton/Makefile", "{{name}}/tests/lux/__skeleton/Makefile"}.
+{template, "svc/tests/lux/__common/common.luxinc", "{{name}}/tests/lux/__common/common.luxinc"}.
+{template, "svc/tests/lux/__common/jsonrpc.luxinc", "{{name}}/tests/lux/__common/jsonrpc.luxinc"}.
